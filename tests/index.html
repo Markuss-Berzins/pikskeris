@@ -23,12 +23,20 @@
     style="max-width:100%; border-radius:12px; margin: 20px 0;"
   />
 
-  <div>
-    <button onclick="answer(true)">🚨 Phishing</button>
-    <button onclick="answer(false)">✅ Nav phishing</button>
-  </div>
+<div>
+  <button id="btnPhish" onclick="answer(true)">🚨 Phishing</button>
+  <button id="btnSafe" onclick="answer(false)">✅ Nav phishing</button>
+</div>
 
-  <p id="feedback"></p>
+<p id="feedback"></p>
+
+<button
+  id="nextBtn"
+  style="display:none; margin-top:20px;"
+  onclick="nextQuestion()"
+>
+  Nākamais jautājums →
+</button>
 
 </div>
 
