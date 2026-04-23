@@ -76,16 +76,20 @@ function answer(choice) {
  * REZULTĀTS
  ***********************/
 function showResult() {
-  let level = "Iesācējs";
-  if (score >= 7) level = "Vidējs līmenis";
-  if (score >= 9) level = "Eksperts";
-
   document.body.innerHTML = `
     <div class="container">
-      <h2>Rezultāts</h2>
-      <p><strong>${score}</strong> no ${questions.length}</p>
-      <p>Tavs līmenis: <strong>${level}</strong></p>
-      <a href="../" class="btn">Atpakaļ uz sākumu</a>
+      <h2>Tests pabeigts</h2>
+      <p>
+        Tavs rezultāts:
+        <strong>${score}</strong> no ${questions.length}
+      </p>
+
+      <p>
+        Paldies par dalību! Regulāra šādu piemēru analizēšana
+        palīdz labāk atpazīt pikšķerēšanu ikdienā.
+      </p>
+
+      ../Sākt no jauna</a>
     </div>
   `;
 }
