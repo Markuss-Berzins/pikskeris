@@ -99,3 +99,8 @@ footer a:hover {
 .linkedin-link svg {
   color: #0a66c2; /* LinkedIn blue */
 }
+.contact-label {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
