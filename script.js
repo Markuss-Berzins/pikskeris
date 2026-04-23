@@ -1,45 +1,52 @@
-const questions = [
-  {
-    text: "E‑pasts: “Steidzami apstipriniet savu bankas kontu, pretējā gadījumā tas tiks bloķēts.”",
-    phishing: true,
-    explanation: "Bankas nekad neprasa apstiprināt kontu caur e‑pastu."
-  },
-  {
-    text: "E‑pasts no kolēģa ar sapulces laiku un vietu.",
-    phishing: false,
-    explanation: "Nav steidzamības, nav aizdomīgu saišu."
-  },
-  {
-    text: "SMS: “Jūsu sūtījums aizturēts. Samaksājiet 1,99 €.”",
-    phishing: true,
-    explanation: "Piegādes uzņēmumi nelūdz maksājumus ar SMS."
-  },
-  {
-    text: "Paziņojums par sistēmas plānoto apkopi no IT nodaļas.",
-    phishing: false,
-    explanation: "Informējošs teksts bez draudiem."
-  },
-  {
-    text: "E‑pasts ar pielikumu “Rēķins.pdf.exe”.",
-    phishing: true,
-    explanation: "Izpildāmi faili e‑pastos ir augsta riska pazīme."
-  }
+/***********************
+ * VISI PIEEJAMIE ATTĒLI
+ * (paplašini šo sarakstu, kad pievieno jaunus)
+ ***********************/
+const ALL_QUESTIONS = [
+  { image: "images/q01.png", phishing: true,  explanation: "Steidzams pieprasījums – klasiska pazīme." },
+  { image: "images/q02.png", phishing: false, explanation: "Parasts informatīvs paziņojums bez draudiem." },
+  { image: "images/q03.png", phishing: true,  explanation: "Saite aicina veikt maksājumu." },
+  { image: "images/q04.png", phishing: false, explanation: "Nav saites, nav steidzamības." },
+  { image: "images/q05.png", phishing: true,  explanation: "Prasa personas datus." },
+  { image: "images/q06.png", phishing: true,  explanation: "Nepazīstams sūtītājs + pielikums." },
+  { image: "images/q07.png", phishing: false, explanation: "Iekšējs darba paziņojums." },
+  { image: "images/q08.png", phishing: true,  explanation: "SMS ar maksājuma pieprasījumu." },
+  { image: "images/q09.png", phishing: false, explanation: "Publisks paziņojums bez darbības." },
+  { image: "images/q10.png", phishing: true,  explanation: "Maldinošs bankas dizains." },
+
+  /* ← turpini līdz 30+ */
 ];
+
+/***********************
+ * IZVĒLAMIES RANDOM 10
+ ***********************/
+function getRandomQuestions(all, count) {
+  const shuffled = [...all].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
+
+const questions = getRandomQuestions(ALL_QUESTIONS, 10);
 
 let current = 0;
 let score = 0;
 
+/***********************
+ * PARĀDA JAUTĀJUMU
+ ***********************/
 function showQuestion() {
   const q = questions[current];
 
-  document.getElementById("text").innerText = q.text;
+  document.getElementById("questionImage").src = "../" + q.image;
   document.getElementById("counter").innerText =
     `Jautājums ${current + 1} no ${questions.length}`;
 
-  const percent = ((current) / questions.length) * 100;
+  const percent = (current / questions.length) * 100;
   document.getElementById("progressBar").style.width = percent + "%";
 }
 
+/***********************
+ * ATBILDES APSTRĀDE
+ ***********************/
 function answer(choice) {
   const q = questions[current];
   const feedback = document.getElementById("feedback");
@@ -65,17 +72,20 @@ function answer(choice) {
   }, 1800);
 }
 
+/***********************
+ * REZULTĀTS
+ ***********************/
 function showResult() {
   let level = "Iesācējs";
-  if (score >= 4) level = "Vidējais zinātājs";
-  if (score === questions.length) level = "Eksperts";
+  if (score >= 7) level = "Vidējs līmenis";
+  if (score >= 9) level = "Eksperts";
 
   document.body.innerHTML = `
     <div class="container">
       <h2>Rezultāts</h2>
       <p><strong>${score}</strong> no ${questions.length}</p>
       <p>Tavs līmenis: <strong>${level}</strong></p>
-      <a class="btn" href="../">Atpakaļ uz sākumu</a>
+      <a href="../" class="btn">Atpakaļ uz sākumu</a>
     </div>
   `;
 }
