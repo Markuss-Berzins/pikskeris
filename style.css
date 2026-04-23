@@ -94,6 +94,23 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-footer p {
-  margin: 20px 0;
+/* 1. Izglītojošais paziņojums – bez apakšējās atstarpes */
+footer .notice {
+  margin-bottom: 0;
+}
+
+/* 2. Privātuma politika – bez augšējās atstarpes */
+footer .privacy-link {
+  display: inline-block;
+  margin-top: 0;
+}
+
+/* 3. Autora rinda – ar atstarpi no augšējā satura */
+footer .author-inline {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b8c0e0;
+  font-size: 0.9rem;
 }
