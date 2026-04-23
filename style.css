@@ -68,8 +68,22 @@ footer {
 }
 
 footer .author {
-  margin: 10px 0;
+  margin: 10px 0 4px;
   color: #b8c0e0;
+}
+
+footer .author-link {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+}
+
+footer .author-link a {
+  color: #9ab8ff;
+  text-decoration: none;
+}
+
+footer .author-link a:hover {
+  text-decoration: underline;
 }
 
 footer a {
