@@ -106,11 +106,29 @@ footer .privacy-link {
 }
 
 /* 3. Autora rinda – ar atstarpi no augšējā satura */
-footer .author-inline {
-  margin-top: 76px;
+.author-inline {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 16px;
   color: #b8c0e0;
   font-size: 0.9rem;
 }
+
+.author-inline span,
+.author-inline a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Papildu vizuālais polish */
+.author-link {
+  color: #9ab8ff;
+  text-decoration: none;
+}
+
+.author-link:hover {
+  text-decoration: underline;
+}
+
