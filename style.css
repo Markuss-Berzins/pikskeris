@@ -67,22 +67,22 @@ footer {
   color: #7f88a9;
 }
 
+footer .notice {
+  margin-bottom: 0;
+}
+
 footer .author {
-  margin: 10px 0 4px;
+  margin-top: 16px;
+  font-size: 0.9rem;
   color: #b8c0e0;
 }
 
-footer .author-link {
-  margin: 0 0 10px;
-  font-size: 0.85rem;
-}
-
-footer .author-link a {
+footer .author a {
   color: #9ab8ff;
   text-decoration: none;
 }
 
-footer .author-link a:hover {
+footer .author a:hover {
   text-decoration: underline;
 }
 
@@ -94,41 +94,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-/* 1. Izglītojošais paziņojums – bez apakšējās atstarpes */
-footer .notice {
-  margin-bottom: 0;
-}
-
-/* 2. Privātuma politika – bez augšējās atstarpes */
-footer .privacy-link {
-  display: inline-block;
-  margin-top: 0;
-}
-
-/* 3. Autora rinda – ar atstarpi no augšējā satura */
-.author-inline {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 16px;
-  color: #b8c0e0;
-  font-size: 0.9rem;
-}
-
-.author-inline span,
-.author-inline a {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-}
-
-/* Papildu vizuālais polish */
-.author-link {
-  color: #9ab8ff;
-  text-decoration: none;
-}
-
-.author-link:hover {
-  text-decoration: underline;
-}
-
