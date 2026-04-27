@@ -195,14 +195,24 @@ function answer(choice) {
   document.getElementById("btnPhish").disabled = true;
   document.getElementById("btnSafe").disabled = true;
 
+  let html = "";
+
   if (choice === q.phishing) {
     score++;
-    feedback.innerText = "✅ Pareizi. " + q.explanation;
-    feedback.style.color = "#22c55e";
+    html += "<p style='color:#22c55e'>✅ Pareizi.</p>";
   } else {
-    feedback.innerText = "❌ Nepareizi. " + q.explanation;
-    feedback.style.color = "#ef4444";
+    html += "<p style='color:#ef4444'>❌ Nepareizi.</p>";
   }
+
+  html += "<ul>";
+
+  q.explanation.forEach(point => {
+    html += `<li>${point}</li>`;
+  });
+
+  html += "</ul>";
+
+  feedback.innerHTML = html;
 
   document.getElementById("nextBtn").style.display = "inline-block";
 }
