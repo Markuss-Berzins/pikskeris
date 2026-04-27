@@ -46,7 +46,7 @@ const ALL_QUESTIONS = [
       "Sūtītāja nosaukums ir vispārīgs un nepārbaudāms.",
       "E‑pasta domēns neizskatās oficiāls.",
       "Aicina steidzami noklikšķināt uz saites.",
-      "Saite ved uz aizdomīgu un neoficiālu vietni."
+      "Saite ved uz aizdomīgu, neoficiālu vietni."
     ]
   },
 
@@ -90,9 +90,8 @@ const ALL_QUESTIONS = [
     image: "images/q08.png",
     phishing: true,
     explanation: [
-      "Brīdina par pakalpojuma pārtraukšanu.",
-      "Aicina atjaunināt maksājuma informāciju.",
-      "Nav skaidra pamatojuma vai detaļu.",
+      "Steidzinot brīdina par pakalpojuma pārtraukšanu.",
+      "Bez skaidra pamatojuma vai detaļām aicina atjaunināt maksājuma informāciju.",
       "Poga mudina klikšķināt uz saites.",
       "Saite nesakrīt ar oficiālu pakalpojuma domēnu."
     ]
@@ -128,7 +127,7 @@ const ALL_QUESTIONS = [
     explanation: [
       "Sūtītāja e-pasts sakrīt ar parakstā norādīto domēnu.",
       "Pielikuma izmērs ir tipisks PDF dokumentam.",
-      "Fails nav arhīvs vai izpildāms fails.",
+      "Fails nav arhīvs vai izpildāms fails (.7z., .zip).",
       "Norādīts konkrēts rēķina numurs.",
       "Apmaksas termiņš ir standarta, ne steidzams."
     ]
@@ -138,7 +137,6 @@ const ALL_QUESTIONS = [
     image: "images/q12.png",
     phishing: true,
     explanation: [
-      "Izskatās kā oficiāls rēķins par piegādi.",
       "Mēģina radīt steidzamību ar termiņu.",
       "Aicina skatīt rēķinu caur saiti.",
       "Saite ved uz ārēju, aizdomīgu vietni.",
@@ -153,7 +151,7 @@ const ALL_QUESTIONS = [
       "Izmanto biedējošu brīdinājumu par bankas kontu.",
       "Draud ar konta slēgšanu īsā laikā.",
       "Sūtītājs uzdodas par bankas drošības komandu.",
-      "Izmanto saīsinātas saites (piem., bit.ly).",
+      "Izmanto saīsinātas saites (piem., bit.ly, short.io, bl.ink).",
       "Mērķis ir izkrāpt bankas piekļuves datus."
     ]
   }
