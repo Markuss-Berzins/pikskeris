@@ -114,8 +114,8 @@ footer a:hover {
 /* Laptopi 13–14 collu */
 @media (max-width: 1366px) {
   .container-test {
-    max-width: 580px;
-    padding: 32px 24px;
+    max-width: 380px;
+    padding: 16px 12px;
   }
 }
 
