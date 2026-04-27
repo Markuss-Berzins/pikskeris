@@ -3,62 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <title>Pikšķerēšanas tests</title>
-<link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="/favicon.png">
 </head>
+
 <body>
 
-<div class="container container-test">
+  <div class="container container-test">
+    <h2>Pikšķerēšanas tests</h2>
 
-  <h2>Pikšķerēšanas tests</h2>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-  <div class="progress">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
+    <p id="counter"></p>
 
-  <p id="counter"></p>
-
-  <img
-    id="questionImage"
-    alt="Piemērs"
-    style="max-width:100%;border-radius:12px;margin:20px 0;"
-  >
-
-  <div>
-    <button id="btnPhish" onclick="answer(true)">🚨 Ir pikšķeris!</button>
-    <button id="btnSafe" onclick="answer(false)">✅ Nav pikšķeris!</button>
-  </div>
-
-  <p id="feedback"></p>
-
-  <button
-    id="nextBtn"
-    class="btn"
-    style="display:none"
-    onclick="nextQuestion()"
-  >
-    Nākamais jautājums →
-  </button>
-
-</div>
-
-<script src="../script.js"></script>
-</body>
-  <footer>
-  <p>⚠️ Izglītojošs projekts. Visi piemēri ir simulēti.</p>
-
-  <p class="author">
-    Projekta izstrādātājs: Markuss Bērziņš -
-    <a
-      href="https://www.linkedin.com/in/markuss-berzins/"
-      target="_blank"
-      rel="noopener"
-      class="author-link"
+    <img
+      id="questionImage"
+      class="question-image"
+      alt="Piemērs"
     >
-      LinkedIn profils
-    </a>
-  </p>
 
-  <a href="privacy.html">Privātuma politika</a>
-</footer>
+    <div>
+      <button id="btnPhish" onclick="answer(true)">🚨 Ir pikšķeris!</button>
+      <button id="btnSafe" onclick="answer(false)">✅ Nav pikšķeris!</button>
+    </div>
+
+    <p id="feedback"></p>
+
+    <button
+      id="nextBtn"
+      class="btn"
+      style="display:none"
+      onclick="nextQuestion()"
+    >
+      Nākamais jautājums →
+    </button>
+  </div>
+
+
+  <footer>
+    <p>⚠️ Izglītojošs projekts. Visi piemēri ir simulēti.</p>
+
+    <p class="author">
+      Projekta izstrādātājs: Markuss Bērziņš —
+      <a
+        href="https://www.linkedin.com/in/markuss-berzins/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn profils
+      </a>
+    </p>
+
+    <a href="../privacy.html">Privātuma politika</a>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
 </html>
