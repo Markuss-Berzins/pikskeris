@@ -98,3 +98,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* Platāks konteiners testam */
+.container-test {
+  max-width: 1100px;
+}
