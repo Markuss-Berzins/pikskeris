@@ -107,14 +107,14 @@ footer a:hover {
 /* Parastie desktopi / lieli laptopi */
 @media (max-width: 1600px) {
   .container-test {
-    max-width: 900px;
+    max-width: 60%;
   }
 }
 
 /* Laptopi 13–14 collu */
 @media (max-width: 1366px) {
   .container-test {
-    max-width: 380px;
+    max-width: 70%;
     padding: 16px 12px;
   }
 }
